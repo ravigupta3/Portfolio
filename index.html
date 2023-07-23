@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ravi's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;400&family=Dancing+Script&family=Edu+NSW+ACT+Foundation:wght@400;500&family=Edu+TAS+Beginner&family=Montserrat:wght@100&family=Poppins:wght@400;700&family=Splash&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+
+    <!-- Icon css link -->
+    <!-- <link href="vendors/material-icon/css/materialdesignicons.min.css" rel="stylesheet"> -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!-- <link href="vendors/linears-icon/style.css" rel="stylesheet"> -->
+
+
+
+
+
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+
+        }
+
+
+
+
+        .education_area {
+            background: rgba(255, 255, 255, 0.3);
+            padding-bottom: 60px;
+        }
+
+        .education_area .education_inner_area {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .education_area .education_inner_area:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 5px;
+            margin-left: -2.5px;
+            background: rgba(254, 198, 8, 0.5);
+        }
+
+        .education_area .education_inner_area .education_item {
+            width: 50%;
+            max-width: 420px;
+            background: #fff;
+            margin-bottom: 30px;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .education_area .education_inner_area .education_item:before {
+            content: attr(data-line);
+            position: absolute;
+            right: -108px;
+            top: 0px;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            border: 4px solid #f7da7b;
+            text-align: center;
+            color: #fff;
+            line-height: 43px;
+            font-family: "Raleway", sans-serif;
+            font-size: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: #fec608;
+        }
+
+        .education_area .education_inner_area .education_item:after {
+            content: "";
+            background: #f7da7b;
+            height: 4px;
+            position: absolute;
+            right: -78px;
+            top: 0px;
+            width: 119%;
+        }
+
+        .education_area .education_inner_area .education_item:nth-child(even) {
+            float: right;
+        }
+
+        .education_area .education_inner_area .education_item:nth-child(even):before {
+            right: auto;
+            left: -108px;
+        }
+
+        .education_area .education_inner_area .education_item:nth-child(even):after {
+            left: -78px;
+        }
+
+        .education_area .education_inner_area .education_item:nth-child(odd) {
+            float: left;
+        }
+
+        .education_area .education_inner_area .education_item:nth-child(2) {
+            margin-top: 108px;
+        }
+
+        .education_area .education_inner_area .education_item:last-child {
+            margin-bottom: 0px;
+        }
+
+        .education_area .education_inner_area .education_item h6 {
+            font-size: 14px;
+            color: #fec608;
+            font-family: "Raleway", sans-serif;
+            font-weight: bold;
+        }
+
+        .education_area .education_inner_area .education_item h4 {
+            font-size: 18px;
+            font-family: "Raleway", sans-serif;
+            color: #333333;
+            padding: 8px 0px 7px 0px;
+        }
+
+        .education_area .education_inner_area .education_item h5 {
+            font-size: 14px;
+            color: #333333;
+            font-family: "Raleway", sans-serif;
+        }
+
+        .education_area .education_inner_area .education_item p {
+            font-size: 13px;
+            line-height: 24px;
+            font-family: "Raleway", sans-serif;
+            color: #666666;
+            font-weight: 400;
+            padding-top: 12px;
+        }
+
+
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            margin-top: 60px;
+        }
+
+        nav {
+
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 98px;
+            background-color: rgb(18, 18, 32);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 0rem;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(142, 142, 246);
+            font-size: 1.01rem;
+        }
+
+        .secondSection li {
+            font-size: 1.3rem;
+        }
+
+        .secondSection li a:hover {
+            color: rgb(142, 142, 246);
+            font-size: 1.32rem;
+        }
+
+        .left {
+            font-size: 1.8rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 120px 0
+        }
+
+        .firstSection>div {
+            width: 30%;
+
+
+        }
+
+        .firstSection .leftSection {
+
+            font-size: 2.8rem;
+            /* margin: 70px 0; */
+        }
+
+        .firstSection .leftSection .buttons {
+            padding: 10px 0;
+        }
+
+        .firstSection .leftSection .btn {
+            padding: 12px;
+            background: #1e2167;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+
+        }
+
+        /* .firstSection .rightSection img {
+        width: 23%; */
+        /* margin: 50px 0; ------to be commented*/
+        /* width: 45%; -----to be commented*/
+        /* height: 60%;
+            position: absolute;
+            bottom: 146px;
+            right: 197px;
+        } */
+
+        /* .firstSection .rightSection .img {
+            height: 100%;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            transition: bottom 1s, left 1s;
+            width: 23%;
+               height: 60%;
+            position: absolute;
+            bottom: 146px;
+            right: 197px;
+        } */
+
+        /* .firstSection .rightSection img:hover .bg{
+            bottom: 40px;
+        }
+
+
+        .firstSection .rightSection .img:hover .me{
+            left: 45%
+        } */
+
+
+        .rightSection img {
+            /* justify-content: center; */
+            width: 80%;
+            margin: 50px 0;
+        }
+
+        .purple {
+            color: rgb(160, 94, 223);
+        }
+
+        #elementPassion {
+            color: rgb(160, 94, 223);
+        }
+
+        .thirdSection,
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+
+        }
+
+        main hr {
+
+            border: 0;
+            background: rgb(147, 120, 173);
+            height: 1.2px;
+            margin: 30px 84px;
+
+        }
+
+        .thirdSection h1 {
+            font-size: 1.9rem;
+        }
+
+        .secondSection h1 {
+            font-size: 1.9rem;
+        }
+
+        .educationSection h1 {
+            font-size: 1.9rem;
+            padding-left: 8.8rem;
+        }
+
+        /* .thirdSection .box {
+            background: white;
+            width: 80vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        } */
+
+        /* .thirdSection .vertical {
+            height: 93px;
+            width: 1px;
+
+            background-color: white;
+            margin: 0 100px;
+        } */
+
+        footer {
+            background-color: rgb(18, 18, 32);
+            height: 94px;
+        }
+
+        .footer {
+            display: flex;
+            padding: 19px 122px;
+            justify-content: space-evenly;
+
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer>div {
+            width: 223px;
+        }
+
+        footer .footer-website {
+            text-align: center;
+            color: grey;
+            padding: 0px;
+        }
+
+
+        /*  */
+        /*  */
+        /*  */
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            width: 100%;
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .btn-bd-primary {
+            --bd-violet-bg: #712cf9;
+            --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+            --bs-btn-font-weight: 600;
+            --bs-btn-color: var(--bs-white);
+            --bs-btn-bg: var(--bd-violet-bg);
+            --bs-btn-border-color: var(--bd-violet-bg);
+            --bs-btn-hover-color: var(--bs-white);
+            --bs-btn-hover-bg: #6528e0;
+            --bs-btn-hover-border-color: #6528e0;
+            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+            --bs-btn-active-color: var(--bs-btn-hover-color);
+            --bs-btn-active-bg: #5a23c8;
+            --bs-btn-active-border-color: #5a23c8;
+        }
+
+        .bd-mode-toggle {
+            z-index: 1500;
+        }
+
+        /*  */
+        /*  */
+
+
+        .secondSection {
+            /* display: flex;
+            justify-content: space-around; */
+            /* align-items: center; */
+            /* margin: 80px 0 */
+        }
+
+        .secondSection>div {
+            width: 30%;
+
+
+        }
+
+        .secondSection .leftSection {
+
+            width: 80%;
+            margin: -36px 142px;
+        }
+
+        .secondSection .rightSection {
+            width: 80%;
+            margin: -36px 0;
+        }
+
+
+
+        .social_icon li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .social_icon li a {
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            border: 1px solid #677fb5;
+            display: block;
+            line-height: 40px;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: all 400ms linear 0s;
+            color: #677fb5;
+        }
+
+        .social_icon ol,
+        ul {
+            padding-left: 0rem;
+        }
+
+
+        .social_icon li:nth-child(2) a {
+            color: #895a4d;
+            border-color: #895a4d;
+        }
+
+        .social_icon li:nth-child(2):hover a {
+            background: #895a4d;
+        }
+
+        .social_icon li:nth-child(3) a {
+            color: #d34836;
+            border-color: #d34836;
+        }
+
+        .social_icon li:nth-child(3):hover a {
+            background: #d34836;
+        }
+
+        .social_icon li:nth-child(4) a {
+            color: #007ab9;
+            border-color: #007ab9;
+        }
+
+        .social_icon li:nth-child(4):hover a {
+            background: #007ab9;
+        }
+
+        .social_icon li:nth-child(5) a {
+            color: #d8545d;
+            border-color: #d8545d;
+        }
+
+        .social_icon li:nth-child(5):hover a {
+            background: #d8545d;
+        }
+
+        .social_icon li:nth-child(6) a {
+            color: #5ecbf3;
+            border-color: #5ecbf3;
+        }
+
+        .social_icon li:nth-child(6):hover a {
+            background: #5ecbf3;
+        }
+
+        .social_icon li:nth-child(7) a {
+            color: #ff3ba4;
+            border-color: #ff3ba4;
+        }
+
+        .social_icon li:nth-child(7):hover a {
+            background: #ff3ba4;
+        }
+
+        .social_icon li:last-child {
+            margin-right: 0px;
+        }
+
+        .social_icon li:last-child a {
+            color: #faaa5e;
+            border-color: #faaa5e;
+        }
+
+        .social_icon li:last-child:hover a {
+            background: #faaa5e;
+        }
+
+        .social_icon li:hover a {
+            background: #677fb5;
+            color: #fff;
+        }
+
+        .navBar {
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            z-index: 1000;
+        }
+
+        .card-body a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        @media screen and (max-width: 400px) {
+            .firstSection .leftSection {
+                font-size: 1.5rem !important;
+
+            }
+        }
+
+        /* @media screen and (max-width: 300px){
+            .firstSection .leftSection {
+                font-size: 1.45rem !important;
+
+            }
+        } */
+
+        @media screen and (max-width: 1322px) {
+
+            body {
+                /* min-width: fit-content; */
+                overflow-x: hidden;
+            }
+
+
+            .firstSection {
+                flex-direction: column-reverse;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            .firstSection .leftSection {
+                width: 100% !important;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: 2.45rem;
+
+            }
+
+            .firstSection .rightSection {
+                width: 400px !important;
+                display: flex;
+                justify-content: center;
+            }
+
+            .rightSection img {
+                /* justify-content: center; */
+                margin: 50px 47px;
+            }
+
+            .rightSection img {
+                /* justify-content: center; */
+                width: 65vw;
+            }
+
+            dl,
+            ol,
+            ul {
+                margin-top: 0;
+                margin-bottom: 1rem;
+            }
+
+            ol,
+            ul {
+                padding-left: 0rem;
+            }
+
+            .thirdSection,
+            .secondSection {
+                max-width: 88vw;
+                margin: auto;
+            }
+
+            .secLeft {
+
+                padding-left: 0.5rem !important;
+            }
+
+            .buttons {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .social_icon {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+
+        }
+
+        .projCard {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .projCard img {
+            height: 240px;
+            /* width: 250px; */
+            padding: 0 20px;
+            vertical-align: middle;
+
+        }
+    </style>
+</head>
+
+
+<body>
+    <header class="navBar">
+        <nav>
+            <div class="left">Ravi's Portfolio</div>
+            <div class="right">
+                <ul>
+
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <!-- <li><a href="#contact">Contact Me</a></li> -->
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="about" class="firstSection">
+            <div class="leftSection">
+                <div>Hi, I'm <span class="purple">Ravi</span></div>
+
+                <div>
+                    <p>and I am a passionate</p>
+                </div>
+                <div><span id="elementPassion"></span></div>
+                <div class="buttons">
+                    <div>
+                        <button class="btn">Download Resume</button>
+                        <!-- <button class="btn">Visit Github</button> -->
+
+                    </div>
+
+                </div>
+                <div>
+                    <ul class="social_icon">
+
+                        <li><a href="https://www.linkedin.com/in/g-ravigupta/" target="_blank"><i
+                                    class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://github.com/ravigupta3" target="_blank"><i class="fa fa-github"></i></a>
+                        </li>
+                        <li><a href="mailto:ravigupta2614@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+                        </li>
+                        <li><a href="tel:+919523218545" target="_blank"><i class="fa fa-phone"></i></a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="rightSection">
+                <!-- <img src="bg.PNG" class="shape">
+                <img src="me.PNG" class="me"> -->
+                <img src="dp.png">
+            </div>
+        </section>
+        <hr id="skills">
+        <section class="secondSection">
+            <h1>Technical Skills</h1>
+            <div class="leftSection">
+                <div class="secLeft flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center"
+                    style="padding-left: 6.5rem;">
+                    <div class="d-block position-static pt-0 mx-0 rounded-3 shadow overflow-hidden w-280px"
+                        style="background-color:rgb(0, 0, 33)">
+
+                        <ul class="list-unstyled mb-0">
+                            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2">
+                                    <span class="d-inline-block bg-success rounded-circle p-1"></span>
+                                    HTML, CSS, JavaScript
+                                </a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2">
+                                    <span class="d-inline-block bg-primary rounded-circle p-1"></span>
+                                    Python, C
+                                </a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2">
+                                    <span class="d-inline-block bg-danger rounded-circle p-1"></span>
+                                    MySQL
+                                </a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2">
+                                    <span class="d-inline-block bg-info rounded-circle p-1"></span>
+                                    Git, GitHub, LaTeX
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="rightSection">
+
+                <h1>Coding Profiles</h1>
+
+                <div class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center">
+                    <div class="dropdown-menu d-block position-static pt-0 mx-0 rounded-3 shadow overflow-hidden w-280px" data-bs-theme="light">
+                      <form class="p-2 mb-2 bg-body-tertiary border-bottom">
+                        <input type="search" class="form-control" autocomplete="false" placeholder="Type to filter...">
+                      </form>
+                      <ul class="list-unstyled mb-0">
+                        <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                          <span class="d-inline-block bg-success rounded-circle p-1"></span>
+                          Action
+                        </a></li>
+                        <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                          <span class="d-inline-block bg-primary rounded-circle p-1"></span>
+                          Another action
+                        </a></li>
+                        <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                          <span class="d-inline-block bg-danger rounded-circle p-1"></span>
+                          Something else here
+                        </a></li>
+                        <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                          <span class="d-inline-block bg-info rounded-circle p-1"></span>
+                          Separated link
+                        </a></li>
+                      </ul>
+                    </div>
+            </div> -->
+        </section>
+        <hr id="education">
+        <section>
+            <div class="thirdSection">
+
+                <div class="main_title">
+                    <h2 style="margin-bottom: 3.2vh;">Education</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+
+                        <div>
+                            <h5 class="fw-normal purple">2020-Present</h5>
+                        </div>
+                        <h2 class="fw-normal">College</h2>
+                        <p>
+                        <h3>Amrita School of Engineering</h3>
+                        </p>
+                        <p><strong>Currently in 7th Sem, Electrical and Computer Engineering.</strong></p>
+                        <!-- <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p> -->
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-4">
+                        <div>
+                            <h5 class="fw-normal purple">2017-2019</h5>
+                        </div>
+                        <h2 class="fw-normal">High School</h2>
+                        <p>
+                        <h3>Central Public School</h3>
+                        </p>
+                        <p><strong>Passed All India Senior School Certificate Examination, CBSE</strong></p>
+                        <!-- <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p> -->
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-4">
+                        <div>
+                            <h5 class="fw-normal purple">2016-2017</h5>
+                        </div>
+                        <h2 class="fw-normal">Secondary School</h2>
+                        <p>
+                        <h3>Children Delight School</h3>
+                        </p>
+                        <p><strong>Passed All India Secondary School Examination, CBSE</strong></p>
+                        <!-- <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p> -->
+                    </div><!-- /.col-lg-4 -->
+                </div><!-- /.row -->
+
+
+                <!-- <h1>Education</h1> -->
+
+
+
+
+
+
+            </div>
+        </section>
+
+        <hr>
+        <section id="projects">
+            <div class="thirdSection">
+                <h1>Projects</h1>
+                <div class="">
+
+                    <div class="projCard row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+                        <div class="col">
+                            <div class="card shadow-sm">
+
+
+                                <img src="heigherStudiesPortal3.png">
+
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    <div><b>Heigher Studies Portal</b></div>
+                                    A web portal where students can visit and apply for the course they wish to persure
+                                    for their heigher studies.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://github.com/ravigupta3/Higher-Studies-Portal">View</a></button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow-sm">
+
+                                <!-- <title> -->
+
+                                <!-- </title> -->
+                                <img src="insuranceLogo1.png">
+
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    <div><b>Insurance Management System</b></div>
+                                    A database management system for an insurance company which effectively maintains
+                                    and organizes the company records.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://github.com/ravigupta3/Insurance-Management-System">View</a></button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow-sm">
+
+                                <!-- <title> -->
+
+                                <!-- </title> -->
+                                <img src="puzzle2.png">
+
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    <div><b>Slide Puzzle Challenge</b></div>
+                                    A slidding puzzle game which consists of a matrix of numbers. Players target is
+                                    to arrange the numbers in ascending order.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary"><a
+                                                    href="https://github.com/ravigupta3/Slide-Puzzle-Challenge">View</a></button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card shadow-sm">
+
+                                <!-- <title> -->
+
+                                <!-- </title> -->
+                                <img src="foodOrderingSystem4.png">
+
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    <div><b>Food Ordering System</b></div>
+                                    An application which allows the users to place their food order after successful
+                                    login.
+                                    User can choose food items from various hotel.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://github.com/ravigupta3/Food-Ordering-System-using-C">View</a></button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+
+        <!--  -->
+        <!--  -->
+        <!--  -->
+
+    </main>
+
+    <footer>
+        <div class="footer">
+            <!-- <div class="footer-first">
+                <h3>Ravi's Portfolio</h3>
+            </div> -->
+            <!-- <div class="footer-second">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Project</li>
+                    <li>Education</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Project</li>
+                    <li>Education</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="footer-fourth">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Project</li>
+                    <li>Education</li>
+                    <li>Contact</li>
+                </ul>
+            </div> -->
+        </div>
+        <div class="footer-website">www.indexravi.github.io</div>
+    </footer>
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#elementPassion', {
+            strings: ['Software Developer', 'Web Developer!'],
+            typeSpeed: 50,
+            loop: true
+        });
+    </script>
+    <script>
+        document.addEventListener('click', function (event) {
+            const target = event.target;
+            if (target.tagName === 'A' && target.getAttribute('href').startsWith('#')) {
+                event.preventDefault();
+                const hash = target.getAttribute('href');
+                const offsetTop = document.querySelector(hash).offsetTop;
+                const navHeight = document.querySelector('nav').offsetHeight;
+                const scrollPosition = offsetTop - navHeight;
+
+                window.scrollTo({
+                    top: scrollPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    </script>
+
+
+
+</body>
+
+</html>
